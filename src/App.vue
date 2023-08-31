@@ -15,5 +15,5 @@
 </template>
 
 <style lang="scss">
-  @use './style/generals.scss'
+  @use './style/generals.scss' as *;
 </style>
