@@ -15,6 +15,8 @@
       this.getWorks();
     },
     methods:{
+
+      //LOADING
       getWorks(){
         this.loading = true;
         axios.get(`${this.baseUrl}/api/works`).then((response) => {
@@ -28,6 +30,16 @@
         }
 
         })
+      },
+
+      //STRONCARE LA DESCRIZONE ...
+      truncateText(text){
+        if(text.length > 70){
+          return text.substr(0,70)+'...'
+        }
+        else{
+          return text
+        }
       }
     },
   }
@@ -53,6 +65,22 @@
                 {{project.title}}
               </h5>
             </div>
+            <!-- DESCRIZIONE -->
+            <div>
+              <p class="card-text">
+                {{truncateText(project.description)}}
+              </p>
+            </div>
+            <!-- LINK -->
+            <div class="mb-3">   
+              Link: 
+              <em>
+                <a href="#">{{project.link}}</a>
+              </em>
+            </div>
+            
+
+            
             
 
           </div>
