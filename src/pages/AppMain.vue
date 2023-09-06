@@ -1,8 +1,11 @@
 <script>  
+  import AppLoader from '../components/AppLoader.vue';
   import axios from 'axios';
 
   export default{
-    name: 'AppMain',
+    component: {
+      AppLoader,
+    },
     data(){
       return{
         //Recupero localost della pagina Portoflio creata con Laravel

@@ -2,7 +2,9 @@
 import { createRouter, createWebHistory} from 'vue-router';
 
 //IMPORTIAMO LE COMPONENTI CHE RAPPRESENTANO LE PAGINE
-import Homepage  from './pages/Homepage.vue';
+import HomePage  from './pages/HomePage.vue';
+import AppMain  from './pages/AppMain.vue';
+
 
 //CREIAMO IL ROUTER
 const router = createRouter({
@@ -11,7 +13,13 @@ const router = createRouter({
         {
             path:'/',
             name: 'home',
-            component: Homepage,
+            component: HomePage,
+        },
+
+        {
+            path:'/portfolio',
+            name: 'main',
+            component: AppMain,
         }
     ]
 });

@@ -1,9 +1,21 @@
 <script>
 export default {
-    methods:{
-        
-        
-    }
+    data(){
+        return{
+            menuItem: [
+                {
+                    label: 'Home',
+                    routeName: 'home'
+                },
+
+                {
+                    label: 'Portfolio',
+                    routeName: 'main'
+                },
+            ]
+
+        }
+    },
     
 }
 </script>
@@ -21,26 +33,18 @@ export default {
                 
             </div>
             
+            <!-- COL-RIGHT - LINK PAGINE -->
             <div class="col">
-                <ul class="list-unstiled">
+                <ul class="list-unstyled text-light">
                     <!--  -->
-                    <li>
-                        <a href="">
-                            link
-                        </a>
+                    <li v-for="(item,index) in menuItem" :key='index'>
+                        <router-link class="nav-link" :to="{name: item.routeName}">
+                            {{item.label}}
+                        </router-link>
                     </li>
-                    
-                    <li>
-                        <a href="">
-                            link
-                        </a>
-                    </li>
-
                 </ul>
             </div>
-            
         </div>
-
     </div>
     
 </template>
