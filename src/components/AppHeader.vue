@@ -7,10 +7,13 @@ export default {
                     label: 'Home',
                     routeName: 'home'
                 },
-
                 {
                     label: 'Portfolio',
-                    routeName: 'main'
+                    routeName: 'portfolio'
+                },
+                {
+                    label: 'Contact',
+                    routeName: 'contact'
                 },
             ]
 
